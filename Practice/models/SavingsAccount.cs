@@ -17,7 +17,7 @@ namespace Practice.models
         }
         public override void Withdraw(decimal amount)
         {
-            if(Balance - (double)amount <= 0)
+            if(Balance >= (double)amount)
             {
                 Balance -= (double)amount;
                 Console.WriteLine($"Witdrew: {amount} from Savings Account");
